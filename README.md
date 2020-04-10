@@ -1,5 +1,5 @@
 # Discord Chat Logger
-A small bot made to log messages in a chat into files. The filenames are formated as (server_name)-(channel_name)-(channel_id).txt
+A small bot made to log messages in a chat into files.
 
 ## Installation
 Clone this repository or download its zipfile and uncompresse it
@@ -23,6 +23,12 @@ To run the bot navigate to the folder where the bot files are and run:
 ```bash
 python ./src/bot.py <BOT_AUTH_TOKEN>
 ```
+
+Once you run the bot you will find one folder called `logs` and one file called `servers.json`.
+
+The file called `servers.json` is where bot configurations are saved. You don't have to mess around with it as it just contains mappings betweens servers and tracked channels.
+
+The logs folder contains the logs of each of the channels being tracked. The filenames are formated as `(server_name)-(channel_name)-(channel_id).txt`.
 
 To stop the bot use `CTRL+C`
 
