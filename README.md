@@ -15,10 +15,13 @@ Navigate to the folder where the bot is and install the requirements in requirem
 pip install -r requirements.txt
 ```
 
+## Discord Bot Application
+To run the bot you will need to create an aplication at Discord so you can obtain a token needed to run your bot and then invite your bot into the server. A tutorial on how to do it can be found [here](https://discordpy.readthedocs.io/en/latest/discord.html)
+
 ## Run the Bot
 To run the bot navigate to the folder where the bot files are and run:
 ```bash
-python ./src/bot.py
+python ./src/bot.py <BOT_AUTH_TOKEN>
 ```
 
 To stop the bot use `CTRL+C`
