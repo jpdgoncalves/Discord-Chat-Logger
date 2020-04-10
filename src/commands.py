@@ -18,6 +18,10 @@ async def execute(message):
         "help" : _help
     }
 
+    if message.author != message.guild.owner:
+        await message.channel.send("Only the owner of the server can run commands")
+        return
+
     if not is_command(message):
         print(f"'{message.content}' is not a command!")
     
