@@ -16,4 +16,4 @@ class MyClient(discord.Client):
             channel_logger.log(message)
 
 client = MyClient()
-client.run('NjA1MDkzNDAwNDI5MTk5Mzgy.Xo7tew.XqDj2ZqUQ6VllXmF2LUOARE6HWY')
+client.run('YOUR TOKEN HERE')
