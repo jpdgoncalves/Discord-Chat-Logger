@@ -2,3 +2,4 @@ env/
 .vscode/
 log/
 server.json
+src/__pychache__/
