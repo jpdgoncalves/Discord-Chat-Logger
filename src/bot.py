@@ -1,3 +1,4 @@
+import sys
 import discord
 
 import channel_logger
@@ -15,5 +16,9 @@ class MyClient(discord.Client):
         elif message.author != self.user:
             channel_logger.log(message)
 
+if len(sys.argv) != 2:
+    print("Usage: python ./src/bot.py <BOT_AUTH_TOKEN>")
+    quit()
+
 client = MyClient()
-client.run('YOUR TOKEN HERE')
+client.run(sys.argv[1])
