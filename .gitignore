@@ -1,5 +1,5 @@
 env/
 .vscode/
-log/
+logs/
 server.json
 src/__pycache__/

@@ -2,7 +2,7 @@ import os
 import json
 import pprint
 
-from utils import escape_non_alphanumeric
+from utils import escape_non_alphanumeric, escape_non_ascii
 
 '''
 {
@@ -58,12 +58,13 @@ def log(message):
     channel_id = str(channel.id)
     server_name = escape_non_alphanumeric(server.name)
     channel_name = escape_non_alphanumeric(channel.name)
-    author_name = author.display_name
+    author_name = escape_non_ascii(message.author.display_name)
     message_creation_time = message.created_at.ctime()
+    message_content = escape_non_ascii(message.content)
 
     if server_id in tracked_servers and channel_id in tracked_servers[server_id]:
         content = f"<{author_name} {message_creation_time}>\n"
-        content += f"{message.content}\n\n"
+        content += f"{message_content}\n\n"
         print(f"Logging:\n {content}")
 
         with open(f"{_LOG_DIR}/{server_name}-{channel_name}-{channel_id}.txt", "a") as log_file:

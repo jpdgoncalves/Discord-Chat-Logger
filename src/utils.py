@@ -18,3 +18,6 @@ def escape_non_alphanumeric(string):
         "",
         string
     )
+
+def escape_non_ascii(string):
+    return string.encode("ascii", errors="ignore").decode()

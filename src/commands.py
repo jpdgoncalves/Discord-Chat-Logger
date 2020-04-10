@@ -18,10 +18,6 @@ async def execute(message):
         "help" : _help
     }
 
-    if message.author != message.guild.owner:
-        await message.channel.send(f"Only the owner of the guild can use this bot!")
-        return
-
     if not is_command(message):
         print(f"'{message.content}' is not a command!")
     
@@ -42,6 +38,7 @@ async def _help(args, message):
     await message.channel.send(f'''
     Dislogger:
       - {_COMMAND_PREFIX} <command> [args]
+    
     Commands:
       - track <channel> : Marks a channel as to track
       - untrack <channel> : Unmarks a previously tracked channel
