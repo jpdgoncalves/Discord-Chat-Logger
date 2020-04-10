@@ -2,7 +2,7 @@
 A small bot made to log messages in a chat into files.
 
 ## Installation
-Clone this repository or download its zipfile and uncompresse it
+Clone this repository or download its zipfile and uncompress it.
 
 Install [Python](https://www.python.org/downloads/) if you don't have it. Make sure you have the pip and path options ticked.
 
