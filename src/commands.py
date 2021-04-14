@@ -18,7 +18,7 @@ async def execute(message):
         "help" : _help
     }
 
-    if message.author != message.guild.owner_id:
+    if message.author.id != message.guild.owner_id:
         await message.channel.send("Only the owner of the server can run commands")
         return
 
