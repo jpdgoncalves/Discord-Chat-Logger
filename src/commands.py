@@ -54,6 +54,7 @@ async def _help(args, message):
 async def _track(args, message):
     if len(args) != 1:
         await message.channel.send(f" Wrong number of arguments for track {args}. Usage: $dcl track <channel>")
+        return
     
     channel_id = extract_id(args[0])
     channel = message.guild.get_channel(channel_id)
@@ -65,6 +66,7 @@ async def _track(args, message):
 async def _untrack(args, message):
     if len(args) != 1:
         await message.channel.send(f"Wrong number of arguments for untrack {args}. Usage: $dcl untrack <channel>")
+        return
     
     channel_id = extract_id(args[0])
     channel = message.guild.get_channel(channel_id)
@@ -79,6 +81,7 @@ async def _untrack(args, message):
 async def _list_channels(args, message):
     if len(args) != 0:
         await message.channel.send(f"Wrong number of arguments for list {args}. Usage: $dcl list")
+        return
     
     server = message.guild
     tracked_channels = channel_logger.list_channels(server)
